@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-html {
-  line-height: 1.5;
-}
-
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Karla", sans-serif;
 }
@@ -36,4 +32,17 @@ input[type=submit] {
 
 textarea {
   resize: vertical;
+}
+
+@media (min-width: 325px) {
+  .main-app-container {
+    background-color: hsl(148, 38%, 91%);
+    min-height: 100svh;
+    padding: 2em 1em;
+  }
+  .main-app-container .form-container {
+    background-color: white;
+    border-radius: 0.8em;
+    min-height: 100svh;
+  }
 }/*# sourceMappingURL=style.css.map */

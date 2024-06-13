@@ -2,3 +2,15 @@
 @use "./font" as *;
 @use "./colors" as *;
 @use "./mixins" as *;
+@media (min-width: 325px) {
+  .main-app-container {
+    background-color: $primary-green;
+    min-height: 100svh;
+    padding: 2em 1em;
+    .form-container {
+      background-color: white;
+      border-radius: .8em;
+      min-height: 100svh;
+    }
+  }
+}
