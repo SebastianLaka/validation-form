@@ -13,11 +13,13 @@ body {
     Ubuntu, Cantarell, "Karla", sans-serif;
 }
 button,
-input {
+input,
+textarea {
   font-family: inherit;
   font-size: 1rem;
   font-weight: inherit;
   line-height: inherit;
+  letter-spacing: inherit;
   color: inherit;
   padding: 0;
 }
