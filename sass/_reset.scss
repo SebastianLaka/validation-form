@@ -23,3 +23,9 @@ textarea {
   color: inherit;
   padding: 0;
 }
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: transparent; 
+  background-image: none;
+}
