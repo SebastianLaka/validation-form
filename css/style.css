@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -11,4 +13,14 @@ html {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Karla", sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
