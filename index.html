@@ -12,9 +12,31 @@
     <title>Contact form</title>
 </head>
 <body>
-    <main class="main-app-container">
-        <section class="form-container">  
-        </section> 
+    <main class="main-app">
+        <section class="app-container">
+            <h1 class="app-container__header">Contact Us</h1>
+            <form class="form">
+                <label class="form__f-name">First name
+                    <input type="text" />
+                </label>
+                <label class="form__l-name">Last name
+                    <input type="text" />
+                </label>
+                <label class="form__e-mail">Email address
+                    <input type="email" />
+                </label>
+                <label class="form__e-mail">Query type
+                    <input type="radio" />
+                    <input type="radio" /></label>
+                <label class="form__text-area">Message
+                    <textarea name="message"></textarea>
+                </label>
+                <label class="container">I consent to being contacted by the team 
+                    <input type="checkbox">
+                </label>
+                <button>Submit</button>
+            </form>
+        </section>
     </main>
     <script src="./script.js"></script>
 </body>

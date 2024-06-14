@@ -21,6 +21,7 @@ textarea {
   letter-spacing: inherit;
   color: inherit;
   padding: 0;
+  display: block;
 }
 
 input[type=button],
@@ -35,14 +36,26 @@ textarea {
 }
 
 @media (min-width: 325px) {
-  .main-app-container {
+  .main-app {
     background-color: hsl(148, 38%, 91%);
-    min-height: 100svh;
     padding: 2em 1em;
   }
-  .main-app-container .form-container {
+  .main-app .app-container {
+    padding: 1.5em 1em;
     background-color: white;
     border-radius: 0.8em;
     min-height: 100svh;
+  }
+  .main-app .app-container__header {
+    font-size: 2rem;
+  }
+  .main-app .app-container .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
