@@ -6,11 +6,12 @@
   .main-app {
     background-color: $primary-green;
     padding: 2em 1em;
+    min-height: 100svh;
     .app-container {
       padding: 1.5em 1em;
       background-color: white;
       border-radius: .8em;
-      height: 100svh;
+      
       &__header{
         font-size: $header-size;
       }

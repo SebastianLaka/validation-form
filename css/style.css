@@ -40,12 +40,12 @@ textarea {
   .main-app {
     background-color: hsl(148, 38%, 91%);
     padding: 2em 1em;
+    min-height: 100svh;
   }
   .main-app .app-container {
     padding: 1.5em 1em;
     background-color: white;
     border-radius: 0.8em;
-    height: 100svh;
   }
   .main-app .app-container__header {
     font-size: 2rem;
