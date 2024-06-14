@@ -10,13 +10,14 @@
       padding: 1.5em 1em;
       background-color: white;
       border-radius: .8em;
-      min-height: 100svh;
+      height: 100svh;
       &__header{
         font-size: $header-size;
       }
       .form{
         display: flex;
         flex-direction: column;
+        gap: 1em 0;
       }
     }
   }
