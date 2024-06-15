@@ -27,7 +27,7 @@
           padding-left: .5em;
         }
         &__input {
-          padding: 1em 2em;
+          padding: .75em 1.5em;
           margin-top: 0.75em;
           width: 100%;
           @include border;
@@ -38,11 +38,12 @@
           .general-enquiry-label,
           .support-request-label {
             display: flex;
-            padding: 1em 1.5em;
+            padding: .75em 1.5em;
             @include border;
             &__query-radio{
               margin-right: .75em;
               width: .9em;
+              background-color: $secondary-green;
             }
           }
         }
@@ -59,7 +60,7 @@
         gap:1em;
        }
        &__submit-button{
-        padding: 1.25em 2em;
+        padding: 1em 2em;
         border-radius: .8em;
         border: none;
         background-color: $secondary-green;
