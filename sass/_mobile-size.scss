@@ -31,6 +31,11 @@
           margin-top: 0.75em;
           width: 100%;
           @include border;
+          transition: border .3s;
+          cursor: pointer;
+        }
+        &__input:hover{
+          border: .1em solid $secondary-green;
         }
         &__query-area {
           @include flex-column;
@@ -40,6 +45,7 @@
             display: flex;
             padding: .75em 1.5em;
             @include border;
+            cursor: pointer;
             &__query-radio{
               margin-right: .75em;
               width: .9em;
@@ -66,6 +72,11 @@
         background-color: $secondary-green;
         color: $primary-green;
         font-weight: $bold-weight;
+        transition: background-color .3s;
+        cursor: pointer;
+       }
+       &__submit-button:hover{
+        background-color: $neutral-secondary-grey;
        }
       }
     }
