@@ -1,2 +1,7 @@
 @use "./colors" as *;
 @use "./font" as *;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

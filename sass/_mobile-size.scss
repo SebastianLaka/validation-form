@@ -17,8 +17,7 @@
         font-size: $header-size;
       }
       .form {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: 1.5em 0;
         &__input {
           padding: 1em 2em;
@@ -28,8 +27,7 @@
           border: 0.1em solid $neutral-primary-grey;
         }
         &__query-area {
-          display: flex;
-          flex-direction: column;
+          @include flex-column;
           gap: 1.25em;
           .general-enquiry-label,
           .support-request-label {
