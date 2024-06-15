@@ -15,10 +15,13 @@
       border-radius: 0.8em;
       &__header {
         font-size: $header-size;
+        color: $neutral-secondary-grey;
       }
       .form {
         @include flex-column;
         gap: 1.5em 0;
+        color: $neutral-secondary-grey;
+        font-weight: $basic-weight;
         .star-color{
           color: $secondary-green;
           padding-left: .5em;

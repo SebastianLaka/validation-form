@@ -50,6 +50,7 @@ textarea {
   }
   .main-app .app-container__header {
     font-size: 2rem;
+    color: hsl(187, 24%, 22%);
   }
   .main-app .app-container .form {
     display: -webkit-box;
@@ -60,6 +61,8 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.5em 0;
+    color: hsl(187, 24%, 22%);
+    font-weight: 400;
   }
   .main-app .app-container .form .star-color {
     color: hsl(169, 82%, 27%);
