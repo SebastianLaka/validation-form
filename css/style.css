@@ -43,6 +43,8 @@ textarea {
     min-height: 100svh;
   }
   .main-app .app-container {
+    display: grid;
+    gap: 1em 0;
     padding: 1.5em 1em;
     background-color: white;
     border-radius: 0.8em;
@@ -58,6 +60,13 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1em 0;
+    gap: 1.5em 0;
+  }
+  .main-app .app-container .form__input {
+    padding: 1em 2em;
+    margin-top: 0.75em;
+    width: 100%;
+    border-radius: 0.8em;
+    border: 0.1em solid hsl(186, 15%, 59%);
   }
 }/*# sourceMappingURL=style.css.map */

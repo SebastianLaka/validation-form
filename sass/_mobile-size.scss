@@ -8,17 +8,25 @@
     padding: 2em 1em;
     min-height: 100svh;
     .app-container {
+      display: grid;
+      gap: 1em 0;
       padding: 1.5em 1em;
       background-color: white;
       border-radius: .8em;
-      
       &__header{
         font-size: $header-size;
       }
       .form{
         display: flex;
         flex-direction: column;
-        gap: 1em 0;
+        gap: 1.5em 0;
+        &__input{
+          padding: 1em 2em;
+          margin-top: .75em;
+          width: 100%;
+          border-radius: .8em;
+          border: .1em solid $neutral-primary-grey;
+        }
       }
     }
   }
