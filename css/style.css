@@ -9,7 +9,6 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Karla", sans-serif;
-  height: 100svh;
 }
 
 button,
@@ -98,11 +97,25 @@ textarea {
     width: 0.9em;
   }
   .main-app .app-container .form__text-area {
-    margin-top: 1em;
+    margin-top: 0.75em;
     width: 100%;
     min-height: 35svh;
     padding: 1em 1.5em;
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
+  }
+  .main-app .app-container .form__confirm-form-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+  }
+  .main-app .app-container .form__submit-button {
+    padding: 1.25em 2em;
+    border-radius: 0.8em;
+    border: none;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(148, 38%, 91%);
+    font-weight: 700;
   }
 }/*# sourceMappingURL=style.css.map */

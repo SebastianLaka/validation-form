@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Contact form</title>
 </head>
+
 <body>
     <main class="main-app">
         <section class="app-container">
@@ -25,7 +27,8 @@
                 <label class="form__label">Email address<span class="star-color">*</span>
                     <input type="email" class="form__input" />
                 </label>
-                <label class="form__query-area"><p>Query type<span class="star-color">*</span></p>
+                <label class="form__query-area">
+                    <p>Query type<span class="star-color">*</span></p>
                     <label class="general-enquiry-label">
                         <input type="radio" class="general-enquiry-label__query-radio" />
                         General Enquiry
@@ -38,14 +41,16 @@
                 <label class="form__message">Message<span class="star-color">*</span>
                     <textarea name="message" class="form__text-area"></textarea>
                 </label>
-                <label class="container">
+                <label class="form__confirm-form-area">
+
                     <input type="checkbox">
-                    <p>I consent to being contacted by the team<span class="star-color">*</span></p>
+                    <p class="form__clause">I consent to being contacted by the team<span class="star-color">*</span></p>
                 </label>
-                <button>Submit</button>
+                <button class="form__submit-button" type="submit">Submit</button>
             </form>
         </section>
     </main>
     <script src="./script.js"></script>
 </body>
+
 </html>

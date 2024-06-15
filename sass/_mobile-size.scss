@@ -45,12 +45,24 @@
         }
         
         &__text-area{
-          margin-top: 1em;
+          margin-top: .75em;
           width: 100%;
           min-height: 35svh;
           padding: 1em 1.5em;
           @include border;
         }
+       &__confirm-form-area{
+        display: flex;
+        gap:1em;
+       }
+       &__submit-button{
+        padding: 1.25em 2em;
+        border-radius: .8em;
+        border: none;
+        background-color: $secondary-green;
+        color: $primary-green;
+        font-weight: $bold-weight;
+       }
       }
     }
   }
