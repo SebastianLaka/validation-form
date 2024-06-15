@@ -19,6 +19,10 @@
       .form {
         @include flex-column;
         gap: 1.5em 0;
+        .star-color{
+          color: $secondary-green;
+          padding-left: .5em;
+        }
         &__input {
           padding: 1em 2em;
           margin-top: 0.75em;
