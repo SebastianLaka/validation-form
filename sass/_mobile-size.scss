@@ -27,14 +27,20 @@
           border-radius: 0.8em;
           border: 0.1em solid $neutral-primary-grey;
         }
-        .general-enquiry-label {
-          &__query-area {
+        &__query-area {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25em;
+          .general-enquiry-label,
+          .support-request-label {
             display: flex;
-            flex-direction: column;
-            gap: 1em;
-          }
-          &__query-radio {
-            height: 1.2em;
+            padding: 1em 1.5em;
+            border-radius: 0.8em;
+            border: 0.05em solid $neutral-primary-grey;
+            &__query-radio{
+              margin-right: .75em;
+              width: .9em;
+            }
           }
         }
       }

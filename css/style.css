@@ -69,7 +69,7 @@ textarea {
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
   }
-  .main-app .app-container .form .general-enquiry-label__query-area {
+  .main-app .app-container .form__query-area {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -77,9 +77,20 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1em;
+    gap: 1.25em;
   }
-  .main-app .app-container .form .general-enquiry-label__query-radio {
-    height: 1.2em;
+  .main-app .app-container .form__query-area .general-enquiry-label,
+  .main-app .app-container .form__query-area .support-request-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1em 1.5em;
+    border-radius: 0.8em;
+    border: 0.05em solid hsl(186, 15%, 59%);
+  }
+  .main-app .app-container .form__query-area .general-enquiry-label__query-radio,
+  .main-app .app-container .form__query-area .support-request-label__query-radio {
+    margin-right: 0.75em;
+    width: 0.9em;
   }
 }/*# sourceMappingURL=style.css.map */
