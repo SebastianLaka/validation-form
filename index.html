@@ -17,23 +17,30 @@
             <h1 class="app-container__header">Contact Us</h1>
             <form class="form">
                 <label class="form__label">First name
-                    <input type="text" class="form__input"/>
+                    <input type="text" class="form__input" />
                 </label>
                 <label class="form__label">Last name
-                    <input type="text" class="form__input"/>
+                    <input type="text" class="form__input" />
                 </label>
                 <label class="form__label">Email address
-                    <input type="email" class="form__input"/>
+                    <input type="email" class="form__input" />
                 </label>
-                <label class="form__e-mail">Query type
-                    <input type="radio" />
-                    <input type="radio" /></label>
+                <label class="form__query-area">Query type
+                    <label class="general-enquiry-label">
+                        <input type="radio" class="general-enquiry-labe__query-radio" />
+                        General Enquiry
+                    </label>
+                    <label class="support-request-label">
+                        <input type="radio" class="general-enquiry-labe__query-radio" />
+                        Support Request
+                    </label>
+                </label>
                 <label class="form__text-area">Message
                     <textarea name="message"></textarea>
                 </label>
-                <label class="container"> 
+                <label class="container">
                     <input type="checkbox">
-                    I consent to being contacted by the team
+                    <p>I consent to being contacted by the team</p>
                 </label>
                 <button>Submit</button>
             </form>

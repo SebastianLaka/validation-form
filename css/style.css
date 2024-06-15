@@ -69,4 +69,17 @@ textarea {
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
   }
+  .main-app .app-container .form .general-enquiry-label__query-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1em;
+  }
+  .main-app .app-container .form .general-enquiry-label__query-radio {
+    height: 1.2em;
+  }
 }/*# sourceMappingURL=style.css.map */

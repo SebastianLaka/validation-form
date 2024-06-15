@@ -12,20 +12,30 @@
       gap: 2em 0;
       padding: 1.5em 1em;
       background-color: white;
-      border-radius: .8em;
-      &__header{
+      border-radius: 0.8em;
+      &__header {
         font-size: $header-size;
       }
-      .form{
+      .form {
         display: flex;
         flex-direction: column;
         gap: 1.5em 0;
-        &__input{
+        &__input {
           padding: 1em 2em;
-          margin-top: .75em;
+          margin-top: 0.75em;
           width: 100%;
-          border-radius: .8em;
-          border: .1em solid $neutral-primary-grey;
+          border-radius: 0.8em;
+          border: 0.1em solid $neutral-primary-grey;
+        }
+        .general-enquiry-label {
+          &__query-area {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+          }
+          &__query-radio {
+            height: 1.2em;
+          }
         }
       }
     }
