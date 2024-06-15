@@ -90,11 +90,19 @@ textarea {
     display: flex;
     padding: 1em 1.5em;
     border-radius: 0.8em;
-    border: 0.05em solid hsl(186, 15%, 59%);
+    border: 0.1em solid hsl(186, 15%, 59%);
   }
   .main-app .app-container .form__query-area .general-enquiry-label__query-radio,
   .main-app .app-container .form__query-area .support-request-label__query-radio {
     margin-right: 0.75em;
     width: 0.9em;
+  }
+  .main-app .app-container .form__text-area {
+    margin-top: 1em;
+    width: 100%;
+    min-height: 35svh;
+    padding: 1em 1.5em;
+    border-radius: 0.8em;
+    border: 0.1em solid hsl(186, 15%, 59%);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -27,8 +27,7 @@
           padding: 1em 2em;
           margin-top: 0.75em;
           width: 100%;
-          border-radius: 0.8em;
-          border: 0.1em solid $neutral-primary-grey;
+          @include border;
         }
         &__query-area {
           @include flex-column;
@@ -37,13 +36,20 @@
           .support-request-label {
             display: flex;
             padding: 1em 1.5em;
-            border-radius: 0.8em;
-            border: 0.05em solid $neutral-primary-grey;
+            @include border;
             &__query-radio{
               margin-right: .75em;
               width: .9em;
             }
           }
+        }
+        
+        &__text-area{
+          margin-top: 1em;
+          width: 100%;
+          min-height: 35svh;
+          padding: 1em 1.5em;
+          @include border;
         }
       }
     }
