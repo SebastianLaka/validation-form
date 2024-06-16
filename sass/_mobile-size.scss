@@ -32,6 +32,7 @@
           width: 100%;
           @include border;
           transition: border 0.3s;
+          outline-color: $secondary-green;
           cursor: pointer;
         }
         &__input:hover {
@@ -45,6 +46,7 @@
             display: flex;
             padding: 0.75em 1.5em;
             @include border;
+            transition: background-color .3s, border .3s;
             cursor: pointer;
             &__query-radio {
               margin-right: 0.75em;
@@ -57,6 +59,16 @@
               background-repeat: no-repeat;
             }
           }
+          .general-enquiry-label:hover,
+          .support-request-label:hover{
+              background-color: $primary-green;
+              border: .1em solid $neutral-secondary-grey;
+            }
+            .general-enquiry-label-active,
+          .support-request-label-active{
+              background-color: $primary-green;
+              border: .1em solid $neutral-secondary-grey;
+            }
         }
 
         &__text-area {
@@ -64,7 +76,12 @@
           width: 100%;
           min-height: 35svh;
           padding: 1em 1.5em;
+          outline-color: $secondary-green;
           @include border;
+          transition: border .3s;
+        }
+        &__text-area:hover{
+          border: .1em solid $secondary-green;
         }
         &__checkbox{
           width: 1em;

@@ -76,6 +76,7 @@ textarea {
     border: 0.1em solid hsl(186, 15%, 59%);
     -webkit-transition: border 0.3s;
     transition: border 0.3s;
+    outline-color: hsl(169, 82%, 27%);
     cursor: pointer;
   }
   .main-app .app-container .form__input:hover {
@@ -99,6 +100,8 @@ textarea {
     padding: 0.75em 1.5em;
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
+    -webkit-transition: background-color 0.3s, border 0.3s;
+    transition: background-color 0.3s, border 0.3s;
     cursor: pointer;
   }
   .main-app .app-container .form__query-area .general-enquiry-label__query-radio,
@@ -113,13 +116,29 @@ textarea {
     background-position: right center;
     background-repeat: no-repeat;
   }
+  .main-app .app-container .form__query-area .general-enquiry-label:hover,
+  .main-app .app-container .form__query-area .support-request-label:hover {
+    background-color: hsl(148, 38%, 91%);
+    border: 0.1em solid hsl(187, 24%, 22%);
+  }
+  .main-app .app-container .form__query-area .general-enquiry-label-active,
+  .main-app .app-container .form__query-area .support-request-label-active {
+    background-color: hsl(148, 38%, 91%);
+    border: 0.1em solid hsl(187, 24%, 22%);
+  }
   .main-app .app-container .form__text-area {
     margin-top: 0.75em;
     width: 100%;
     min-height: 35svh;
     padding: 1em 1.5em;
+    outline-color: hsl(169, 82%, 27%);
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
+    -webkit-transition: border 0.3s;
+    transition: border 0.3s;
+  }
+  .main-app .app-container .form__text-area:hover {
+    border: 0.1em solid hsl(169, 82%, 27%);
   }
   .main-app .app-container .form__checkbox {
     width: 1em;
