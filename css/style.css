@@ -68,6 +68,11 @@ textarea {
     color: hsl(169, 82%, 27%);
     padding-left: 0.5em;
   }
+  .main-app .app-container .form__error {
+    font-size: 0.775rem;
+    padding-top: 0.5em;
+    color: hsl(0, 66%, 54%);
+  }
   .main-app .app-container .form__input {
     padding: 0.75em 1.5em;
     margin-top: 0.75em;
@@ -90,7 +95,6 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1.25em;
   }
   .main-app .app-container .form__query-area .general-enquiry-label,
   .main-app .app-container .form__query-area .support-request-label {
@@ -98,6 +102,7 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     padding: 0.75em 1.5em;
+    margin-top: 1.25em;
     border-radius: 0.8em;
     border: 0.1em solid hsl(186, 15%, 59%);
     -webkit-transition: background-color 0.3s, border 0.3s;
@@ -121,8 +126,8 @@ textarea {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }
-  .main-app .app-container .form__query-area .general-enquiry-label,
-  .main-app .app-container .form__query-area .support-request-label {
+  .main-app .app-container .form__query-area .general-enquiry-label-active,
+  .main-app .app-container .form__query-area .support-request-label-active {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }
@@ -153,7 +158,16 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 1em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-app .app-container .form__confirm-form-area .clause-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.5em;
   }
   .main-app .app-container .form__submit-button {
     padding: 1em 2em;
@@ -203,7 +217,7 @@ textarea {
     grid-column: 1/3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: 0 1em;
   }
   .main-app .app-container .form__query-area .general-enquiry-label {
     grid-column: 1/2;

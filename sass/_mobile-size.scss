@@ -26,6 +26,11 @@
           color: $secondary-green;
           padding-left: 0.5em;
         }
+        &__error{
+          font-size: .775rem;
+          padding-top: .5em;
+          color: $primary-red;
+        }
         &__input {
           padding: 0.75em 1.5em;
           margin-top: 0.75em;
@@ -40,11 +45,11 @@
         }
         &__query-area {
           @include flex-column;
-          gap: 1.25em;
           .general-enquiry-label,
           .support-request-label {
             display: flex;
             padding: 0.75em 1.5em;
+            margin-top: 1.25em;
             @include border;
             transition: background-color 0.3s, border 0.3s;
             cursor: pointer;
@@ -61,12 +66,12 @@
           .support-request-label:hover {
             @include active-query-types;
           }
-          .general-enquiry-label,
-          .support-request-label {
+          .general-enquiry-label-active,
+          .support-request-label-active {
             @include active-query-types;
           }
         }
-
+        
         &__text-area {
           margin-top: 0.75em;
           width: 100%;
@@ -88,7 +93,11 @@
         }
         &__confirm-form-area {
           display: flex;
-          gap: 1em;
+          flex-direction: column;
+          .clause-section{
+            display: flex;
+            gap: .5em;
+          }
         }
         &__submit-button {
           padding: 1em 2em;

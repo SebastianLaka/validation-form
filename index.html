@@ -20,12 +20,16 @@
             <form class="form">
                 <label class="form__label form__first-name">First name<span class="star-color">*</span>
                     <input type="text" class="form__input" />
+                    <p class="form__error">This field is required</p>
                 </label>
+
                 <label class="form__label form__last-name">Last name<span class="star-color">*</span>
                     <input type="text" class="form__input" />
+                    <p class="form__error">This field is required</p>
                 </label>
                 <label class="form__label form__email-address">Email address<span class="star-color">*</span>
                     <input type="email" class="form__input" />
+                    <p class="form__error">Please enter a valid email address</p>
                 </label>
                 <label class="form__query-area">
                     <p>Query type<span class="star-color">*</span></p>
@@ -37,15 +41,20 @@
                         <input type="radio" class="general-enquiry-label__query-radio" />
                         Support Request
                     </label>
+                    <p class="form__error">Please select a query type</p>
                 </label>
                 <label class="form__message">Message<span class="star-color">*</span>
                     <textarea name="message" class="form__text-area"></textarea>
+                    <p class="form__error">This field is required</p>
                 </label>
                 <label class="form__confirm-form-area">
-
-                    <input type="checkbox" class="form__checkbox">
-                    <p class="form__clause">I consent to being contacted by the team<span class="star-color">*</span></p>
+                    <div class="clause-section">
+                        <input type="checkbox" class="clause-section__checkbox">
+                        <p class="clause-section__clause">I consent to being contacted by the team<span class="star-color">*</span></p>
+                    </div>
+                    <p class="form__error">To submit this form, please consent to being contacted</p>
                 </label>
+
                 <button class="form__submit-button" type="submit">Submit</button>
             </form>
         </section>
