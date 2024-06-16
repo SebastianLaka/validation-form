@@ -49,7 +49,12 @@
             &__query-radio {
               margin-right: 0.75em;
               width: 0.9em;
-              accent-color: $secondary-green;
+            }
+            &__query-radio-activated{
+              content: url("../img/icon-radio-selected.svg");
+              background-size: 90%;
+              background-position: right center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -69,7 +74,6 @@
           background-size: 90%;
           background-position: right center;
           background-repeat: no-repeat;
-
         }
         &__confirm-form-area {
           display: flex;

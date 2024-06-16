@@ -105,7 +105,13 @@ textarea {
   .main-app .app-container .form__query-area .support-request-label__query-radio {
     margin-right: 0.75em;
     width: 0.9em;
-    accent-color: hsl(169, 82%, 27%);
+  }
+  .main-app .app-container .form__query-area .general-enquiry-label__query-radio-activated,
+  .main-app .app-container .form__query-area .support-request-label__query-radio-activated {
+    content: url("../img/icon-radio-selected.svg");
+    background-size: 90%;
+    background-position: right center;
+    background-repeat: no-repeat;
   }
   .main-app .app-container .form__text-area {
     margin-top: 0.75em;
