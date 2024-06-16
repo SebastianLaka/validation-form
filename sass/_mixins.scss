@@ -9,3 +9,12 @@
   border-radius: 0.8em;
   border: 0.1em solid $neutral-primary-grey;
 }
+@mixin active-query-types {
+  background-color: $primary-green;
+  border: 0.1em solid $neutral-secondary-grey;
+}
+@mixin set-background-image {
+  background-size: 90%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}

@@ -121,8 +121,8 @@ textarea {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }
-  .main-app .app-container .form__query-area .general-enquiry-label-active,
-  .main-app .app-container .form__query-area .support-request-label-active {
+  .main-app .app-container .form__query-area .general-enquiry-label,
+  .main-app .app-container .form__query-area .support-request-label {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }
