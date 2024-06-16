@@ -22,20 +22,20 @@
         gap: 1.5em 0;
         color: $neutral-secondary-grey;
         font-weight: $basic-weight;
-        .star-color{
+        .star-color {
           color: $secondary-green;
-          padding-left: .5em;
+          padding-left: 0.5em;
         }
         &__input {
-          padding: .75em 1.5em;
+          padding: 0.75em 1.5em;
           margin-top: 0.75em;
           width: 100%;
           @include border;
-          transition: border .3s;
+          transition: border 0.3s;
           cursor: pointer;
         }
-        &__input:hover{
-          border: .1em solid $secondary-green;
+        &__input:hover {
+          border: 0.1em solid $secondary-green;
         }
         &__query-area {
           @include flex-column;
@@ -43,41 +43,51 @@
           .general-enquiry-label,
           .support-request-label {
             display: flex;
-            padding: .75em 1.5em;
+            padding: 0.75em 1.5em;
             @include border;
             cursor: pointer;
-            &__query-radio{
-              margin-right: .75em;
-              width: .9em;
-              background-color: $secondary-green;
+            &__query-radio {
+              margin-right: 0.75em;
+              width: 0.9em;
+              accent-color: $secondary-green;
             }
           }
         }
-        
-        &__text-area{
-          margin-top: .75em;
+
+        &__text-area {
+          margin-top: 0.75em;
           width: 100%;
           min-height: 35svh;
           padding: 1em 1.5em;
           @include border;
         }
-       &__confirm-form-area{
-        display: flex;
-        gap:1em;
-       }
-       &__submit-button{
-        padding: 1em 2em;
-        border-radius: .8em;
-        border: none;
-        background-color: $secondary-green;
-        color: $primary-green;
-        font-weight: $bold-weight;
-        transition: background-color .3s;
-        cursor: pointer;
-       }
-       &__submit-button:hover{
-        background-color: $neutral-secondary-grey;
-       }
+        &__checkbox{
+          width: 1em;
+        }
+        &__checkbox-activated{
+          content: url("../img/icon-checkbox-check.svg");
+          background-size: 90%;
+          background-position: right center;
+          background-repeat: no-repeat;
+
+        }
+        &__confirm-form-area {
+          display: flex;
+          gap: 1em;
+        }
+        &__submit-button {
+          padding: 1em 2em;
+          border-radius: 0.8em;
+          border: none;
+          background-color: $secondary-green;
+          color: $primary-green;
+          font-weight: $bold-weight;
+          transition: background-color 0.3s;
+          cursor: pointer;
+        }
+        &__submit-button:hover {
+          background-color: $neutral-secondary-grey;
+        }
       }
     }
   }
