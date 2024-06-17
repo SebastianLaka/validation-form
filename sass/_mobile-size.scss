@@ -10,7 +10,7 @@
     min-height: 100svh;
     .succes-modal {
       position: absolute;
-      top: 1em;
+      top: -20%;
       left: 50%; 
       transform: translateX(-50%);
       @include flex-column;
@@ -23,7 +23,9 @@
         display: flex;
         gap: .5em;
       }
-      
+    }
+    .succes-modal-show{
+      top: 1em;
     }
     .app-container {
       display: grid;

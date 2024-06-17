@@ -44,7 +44,7 @@ textarea {
   }
   .main-app .succes-modal {
     position: absolute;
-    top: 1em;
+    top: -20%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -66,6 +66,9 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     gap: 0.5em;
+  }
+  .main-app .succes-modal-show {
+    top: 1em;
   }
   .main-app .app-container {
     display: grid;
