@@ -47,9 +47,13 @@
           padding-left: 0.5em;
         }
         &__error {
+          display: none;
           font-size: 0.775rem;
           padding-top: 0.5em;
           color: $primary-red;
+        }
+        &__show-error{
+          display: block;
         }
         &__input {
           padding: 0.75em 1.5em;
