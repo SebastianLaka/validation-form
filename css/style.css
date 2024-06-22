@@ -146,7 +146,6 @@ textarea {
   .main-app .app-container .form__query-area .support-request-label__query-radio {
     margin-right: 0.75em;
     width: 0.9em;
-    outline: none;
   }
   .main-app .app-container .form__query-area .general-enquiry-label .query-radio-activated,
   .main-app .app-container .form__query-area .support-request-label .query-radio-activated {
@@ -154,6 +153,11 @@ textarea {
     background-size: 90%;
     background-position: right center;
     background-repeat: no-repeat;
+    background-color: hsl(148, 38%, 91%);
+    border: 0.1em solid hsl(187, 24%, 22%);
+  }
+  .main-app .app-container .form__query-area .general-enquiry-label:hover,
+  .main-app .app-container .form__query-area .support-request-label:hover {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }

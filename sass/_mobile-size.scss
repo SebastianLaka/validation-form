@@ -80,7 +80,6 @@
             &__query-radio {
               margin-right: 0.75em;
               width: 0.9em;
-              outline: none;
             }
             .query-radio-activated {
               content: url("../img/icon-radio-selected.svg");
@@ -88,10 +87,10 @@
               @include active-query-types;
             }
           }
-          // .general-enquiry-label:hover,
-          // .support-request-label:hover {
-          //   @include active-query-types;
-          // }
+          .general-enquiry-label:hover,
+          .support-request-label:hover {
+            @include active-query-types;
+          }
           .general-enquiry-label-active,
           .support-request-label-active {
             @include active-query-types;
