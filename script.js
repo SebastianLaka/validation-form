@@ -1,4 +1,6 @@
 'use strict';
+const regexFnameLname = [A-Za-z];
+const regexEmail = /\S+@\S+\.\S+/;
 const queryTypes = document.querySelectorAll('label[data-query-label]')
 queryTypes.forEach(el => {
     el.addEventListener('click', (e) =>{
