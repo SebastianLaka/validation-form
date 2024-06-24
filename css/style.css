@@ -106,7 +106,7 @@ textarea {
   .main-app .app-container .form__show-error {
     display: block;
   }
-  .main-app .app-container .form__input {
+  .main-app .app-container .form__email-input, .main-app .app-container .form__fname-input, .main-app .app-container .form__lname-input {
     padding: 0.75em 1.5em;
     margin-top: 0.75em;
     width: 100%;

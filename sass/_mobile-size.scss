@@ -55,7 +55,9 @@
         &__show-error{
           display: block;
         }
-        &__input {
+        &__email-input,
+        &__fname-input,
+        &__lname-input {
           padding: 0.75em 1.5em;
           margin-top: 0.75em;
           width: 100%;
