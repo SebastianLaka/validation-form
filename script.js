@@ -1,18 +1,39 @@
-'use strict';
-const modal = document.querySelector('.succes-modal')
-const nameInput = document.querySelector('.form__fname-input')
-const lastNameInput = document.querySelector('.form__lname-input')
-const emailInput = document.querySelector('.form__email-input')
-const queryTypes = document.querySelectorAll('label[data-query-label]')
-const textArea = document.querySelector('.form__text-area')
-const checkbox = document.querySelector('.clause-section__checkbox')
-const submitCTA = document.querySelector('.form__submit-button')
+"use strict";
+const modal = document.querySelector(".succes-modal");
+const input = document.querySelectorAll('[data-form-input]')
+const nameInput = document.querySelector(".form__fname-input");
+const lastNameInput = document.querySelector(".form__lname-input");
+const emailInput = document.querySelector(".form__email-input");
+const queryTypes = document.querySelectorAll("label[data-query-label]");
+const textArea = document.querySelector(".form__text-area");
+const checkbox = document.querySelector(".clause-section__checkbox");
+const submitCTA = document.querySelector(".form__submit-button");
+const error = document.querySelectorAll(".form__error");
 const regexFnameLname = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
-queryTypes.forEach(el => {
-    el.addEventListener('click', (e) =>{
-        e.target.classList.toggle('query-radio-activated')
-        e.target.classList.toggle('general-enquiry-label-active')
-        e.target.checked = false;
-    })
-})
+queryTypes.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.target.classList.toggle("query-radio-activated");
+    e.target.classList.toggle("general-enquiry-label-active");
+    e.target.checked = false;
+  });
+});
+// const addHandleError = (firstName, lastName, emailInput, textArea,) =>{
+//     firstName.classList.add("add-border");
+//     lastName.classList.add("add-border");
+//     emailInput.classList.add('add-border')
+//     textArea.classList.add('add-border')
+// }
+// const removeHandleError = (firstName, lastName, email, textArea) =>{
+//     firstName.classList.remove("remove-border");
+//     lastName.classList.remove("remove-border");
+//     email.classList.remove('remove-border')
+//     textArea.classList.remove('remove-border')
+// }
+submitCTA.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!regexFnameLname.test(nameInput.value, lastNameInput.value, emailInput.value) || (textArea.value='')) {
+    error.forEach(err => err.classList.toggle("show-error"));
+    input.forEach(input => input.classList.toggle('add-border'))
+  }
+});

@@ -103,9 +103,6 @@ textarea {
     padding-top: 0.5em;
     color: hsl(0, 66%, 54%);
   }
-  .main-app .app-container .form__show-error {
-    display: block;
-  }
   .main-app .app-container .form__email-input, .main-app .app-container .form__fname-input, .main-app .app-container .form__lname-input {
     padding: 0.75em 1.5em;
     margin-top: 0.75em;
@@ -217,6 +214,15 @@ textarea {
   }
   .main-app .app-container .form__submit-button:hover {
     background-color: hsl(187, 24%, 22%);
+  }
+  .main-app .app-container .show-error {
+    display: block;
+  }
+  .main-app .app-container .add-border {
+    border: 0.1em solid hsl(0, 66%, 54%);
+  }
+  .main-app .app-container .remove-border {
+    border: 0.1em solid hsl(186, 15%, 59%);
   }
 }
 .wrapper {
