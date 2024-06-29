@@ -9,6 +9,7 @@ const textArea = document.querySelector(".form__text-area");
 const checkbox = document.querySelector(".clause-section__checkbox");
 const submitCTA = document.querySelector(".form__submit-button");
 const error = document.querySelectorAll(".form__error");
+const nameError = document.querySelector('.form__name-error')
 const regexFnameLname = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
 queryTypes.forEach((el) => {
@@ -32,7 +33,12 @@ queryTypes.forEach((el) => {
 // }
 submitCTA.addEventListener("click", (e) => {
   e.preventDefault();
-  if (!regexFnameLname.test(nameInput.value, lastNameInput.value, emailInput.value) || (textArea.value='')) {
+  if(regexFnameLname.test(nameInput.value)){
+     nameError.classList.remove('show-error')
+     nameInput.classList.add('remove-border')
+  }
+  //when all inputs are empty
+  else if (!regexFnameLname.test(nameInput.value, lastNameInput.value, emailInput.value) || (textArea.value='')) {
     error.forEach(err => err.classList.toggle("show-error"));
     input.forEach(input => input.classList.toggle('add-border'))
   }
