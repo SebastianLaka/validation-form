@@ -38,7 +38,7 @@ submitCTA.addEventListener("click", (e) => {
   if(regexFnameLname.test(nameInput.value)){
      nameError.classList.remove('show-error');
      nameInput.classList.add('remove-border');
-  }else if(!regexFnameLname.test(nameInput.value)){
+  }else {
     nameInput.classList.remove('remove-border');
   }
 }
