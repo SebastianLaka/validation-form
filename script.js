@@ -31,15 +31,24 @@ queryTypes.forEach((el) => {
 //     email.classList.remove('remove-border')
 //     textArea.classList.remove('remove-border')
 // }
+
 submitCTA.addEventListener("click", (e) => {
   e.preventDefault();
+  const validFormName = () =>{
   if(regexFnameLname.test(nameInput.value)){
-     nameError.classList.remove('show-error')
-     nameInput.classList.add('remove-border')
+     nameError.classList.remove('show-error');
+     nameInput.classList.add('remove-border');
+  }else if(!regexFnameLname.test(nameInput.value)){
+    nameInput.classList.remove('remove-border');
   }
+}
+validFormName();
   //when all inputs are empty
-  else if (!regexFnameLname.test(nameInput.value, lastNameInput.value, emailInput.value) || (textArea.value='')) {
-    error.forEach(err => err.classList.toggle("show-error"));
-    input.forEach(input => input.classList.toggle('add-border'))
+  const invalidForm = () =>{
+  if (!regexFnameLname.test(nameInput.value, lastNameInput.value) || regexEmail.test(emailInput.value) || (textArea.value='')) {
+    error.forEach(err => err.classList.add("show-error"));
+    input.forEach(input => input.classList.add('add-border'));
   }
+}
+invalidForm();
 });
