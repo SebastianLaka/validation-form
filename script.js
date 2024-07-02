@@ -31,18 +31,26 @@ queryTypes.forEach((el) => {
 //     email.classList.remove('remove-border')
 //     textArea.classList.remove('remove-border')
 // }
-
-submitCTA.addEventListener("click", (e) => {
-  e.preventDefault();
-  const validFormName = () =>{
-  if(regexFnameLname.test(nameInput.value)){
-     nameError.classList.remove('show-error');
-     nameInput.classList.add('remove-border');
+const validFormName = (regex, input, error, inputArea) =>{
+  if(regex.test(input.value)){
+     error.classList.remove('show-error');
+     inputArea.classList.add('remove-border');
   }else {
-    nameInput.classList.remove('remove-border');
+    inputArea.classList.remove('remove-border');
   }
 }
-validFormName();
+submitCTA.addEventListener("click", (e) => {
+  e.preventDefault();
+  validFormName(regexFnameLname, nameInput, nameError, nameInput)
+//   const validFormName = () =>{
+//   if(regexFnameLname.test(nameInput.value)){
+//      nameError.classList.remove('show-error');
+//      nameInput.classList.add('remove-border');
+//   }else {
+//     nameInput.classList.remove('remove-border');
+//   }
+// }
+// validFormName();
   //when all inputs are empty
   const invalidForm = () =>{
   if (!regexFnameLname.test(nameInput.value, lastNameInput.value) || regexEmail.test(emailInput.value) || (textArea.value='')) {
