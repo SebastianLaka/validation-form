@@ -1,16 +1,16 @@
 "use strict";
 const modal = document.querySelector(".succes-modal");
-const input = document.querySelectorAll('[data-form-input]')
-const nameInput = document.querySelector(".form__fname-input");
+const firstNameInput = document.querySelector(".form__fname-input");
 const lastNameInput = document.querySelector(".form__lname-input");
 const emailInput = document.querySelector(".form__email-input");
 const queryTypes = document.querySelectorAll("label[data-query-label]");
 const textArea = document.querySelector(".form__text-area");
 const checkbox = document.querySelector(".clause-section__checkbox");
 const submitCTA = document.querySelector(".form__submit-button");
-const error = document.querySelectorAll(".form__error");
-const nameError = document.querySelector('.form__name-error')
-const regexFnameLname = /[A-Za-z]/;
+const nameError = document.querySelector(".form__name-error");
+const surnameError = document.querySelector(".form__surname-error");
+const emailError = document.querySelector('.form__email-error')
+const regexName = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
 queryTypes.forEach((el) => {
   el.addEventListener("click", (e) => {
@@ -19,44 +19,70 @@ queryTypes.forEach((el) => {
     e.target.checked = false;
   });
 });
-// const addHandleError = (firstName, lastName, emailInput, textArea,) =>{
-//     firstName.classList.add("add-border");
-//     lastName.classList.add("add-border");
-//     emailInput.classList.add('add-border')
-//     textArea.classList.add('add-border')
-// }
-// const removeHandleError = (firstName, lastName, email, textArea) =>{
-//     firstName.classList.remove("remove-border");
-//     lastName.classList.remove("remove-border");
-//     email.classList.remove('remove-border')
-//     textArea.classList.remove('remove-border')
-// }
-const validFormName = (regex, input, error, inputArea) =>{
-  if(regex.test(input.value)){
-     error.classList.remove('show-error');
-     inputArea.classList.add('remove-border');
-  }else {
-    inputArea.classList.remove('remove-border');
-  }
-}
-submitCTA.addEventListener("click", (e) => {
-  e.preventDefault();
-  validFormName(regexFnameLname, nameInput, nameError, nameInput)
-//   const validFormName = () =>{
-//   if(regexFnameLname.test(nameInput.value)){
-//      nameError.classList.remove('show-error');
-//      nameInput.classList.add('remove-border');
-//   }else {
-//     nameInput.classList.remove('remove-border');
+// const validForm = (regex, input, err, inputArea) =>{
+//   if(regex.test(input.value)){
+//      err.forEach(err => err.classList.remove('show-error'));
+//      inputArea.classList.remove('error-border');
 //   }
 // }
-// validFormName();
+const testFieldName = (input) => {
+  return input.value.length >= 3;
+};
+
+submitCTA.addEventListener("click", (e) => {
+  e.preventDefault();
+  // validForm(regexName, firstNameInput, error, firstNameInput)
+  // validForm(regexName, lastNameInput, surnameError, lastNameInput)
+  // const validForm = () => {
+  //   if(regexName.test(firstNameInput.value)){
+  //     nameError.classList.remove('show-error');
+  //     firstNameInput.classList.remove('error-border')
+  //   }
+  // }
+  // validForm()
   //when all inputs are empty
-  const invalidForm = () =>{
-  if (!regexFnameLname.test(nameInput.value, lastNameInput.value) || regexEmail.test(emailInput.value) || (textArea.value='')) {
-    error.forEach(err => err.classList.add("show-error"));
-    input.forEach(input => input.classList.add('add-border'));
-  }
-}
-invalidForm();
+  // const invalidForm = () => {
+    const validName = () => {
+      if (testFieldName(firstNameInput)) {
+        nameError.classList.remove("show-error");
+        firstNameInput.classList.remove("error-border");
+      }else{
+        nameError.classList.add("show-error");
+        firstNameInput.classList.add("error-border");
+      }
+    };
+    validName();
+    const validLastName = () => {
+      if (testFieldName(lastNameInput)) {
+        surnameError.classList.remove("show-error");
+        lastNameInput.classList.remove("error-border");
+      }else{
+        surnameError.classList.add("show-error");
+        lastNameInput.classList.add("error-border");
+      }
+    };
+    validLastName()
+    const validEmail = () =>{
+      if(regexEmail.test(emailInput.value)){
+        emailError.classList.remove('show-error')
+        emailInput.classList.remove('error-border')
+      }else{
+        emailError.classList.add('show-error')
+        emailInput.classList.add('error-border')
+      }
+    }
+    validEmail();
+    // const invalid = () => {
+    //   if (
+    //     !regexName.test(firstNameInput.value, lastNameInput.value) ||
+    //     !regexEmail.test(emailInput.value) ||
+    //     !textArea.value
+    //   ) {
+    //     error.forEach((err) => err.classList.add("show-error"));
+    //     input.forEach((input) => input.classList.add("error-border"));
+    //   }
+    // };
+    // invalid()
+  // };
+  // invalidForm();
 });

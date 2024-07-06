@@ -215,14 +215,11 @@ textarea {
   .main-app .app-container .form__submit-button:hover {
     background-color: hsl(187, 24%, 22%);
   }
-  .main-app .app-container .show-error {
+  .main-app .app-container .form .show-error {
     display: block;
   }
-  .main-app .app-container .add-border {
+  .main-app .app-container .form .error-border {
     border: 0.1em solid hsl(0, 66%, 54%);
-  }
-  .main-app .app-container .remove-border {
-    border: 0.1em solid hsl(186, 15%, 59%);
   }
 }
 .wrapper {

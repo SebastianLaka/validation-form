@@ -136,16 +136,14 @@
         &__submit-button:hover {
           background-color: $neutral-secondary-grey;
         }
+        .show-error{
+          display: block;
+        }
+        .error-border{
+          border: .1em solid $primary-red;
+        }
       }
-      .show-error{
-        display: block;
-      }
-      .add-border{
-        border: .1em solid $primary-red;
-      }
-      .remove-border{
-        border: 0.1em solid $neutral-primary-grey;
-      }
+    
     }
   }
 }
