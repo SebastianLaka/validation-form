@@ -10,6 +10,7 @@ const submitCTA = document.querySelector(".form__submit-button");
 const nameError = document.querySelector(".form__name-error");
 const surnameError = document.querySelector(".form__surname-error");
 const emailError = document.querySelector('.form__email-error')
+const textareaError = document.querySelector('.form__error-textarea')
 const regexName = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
 queryTypes.forEach((el) => {
@@ -72,6 +73,16 @@ submitCTA.addEventListener("click", (e) => {
       }
     }
     validEmail();
+    const validTextarea = () =>{
+      if(textArea.value.length < 1){
+        textareaError.classList.add('show-error')
+        textArea.classList.add('error-border')
+      }else{
+        textareaError.classList.remove('show-error')
+        textArea.classList.remove('error-border')
+      }
+    }
+    validTextarea();
     // const invalid = () => {
     //   if (
     //     !regexName.test(firstNameInput.value, lastNameInput.value) ||
