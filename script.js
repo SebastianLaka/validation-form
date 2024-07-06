@@ -11,6 +11,7 @@ const nameError = document.querySelector(".form__name-error");
 const surnameError = document.querySelector(".form__surname-error");
 const emailError = document.querySelector('.form__email-error')
 const textareaError = document.querySelector('.form__error-textarea')
+const checkboxError = document.querySelector('.form__checkbox-error')
 const regexName = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
 queryTypes.forEach((el) => {
@@ -83,6 +84,14 @@ submitCTA.addEventListener("click", (e) => {
       }
     }
     validTextarea();
+    const validCheckbox = () =>{
+      if(checkbox.checked){
+        checkboxError.classList.remove('show-error')
+      }else{
+        checkboxError.classList.add('show-error')
+      }
+    }
+    validCheckbox();
     // const invalid = () => {
     //   if (
     //     !regexName.test(firstNameInput.value, lastNameInput.value) ||
