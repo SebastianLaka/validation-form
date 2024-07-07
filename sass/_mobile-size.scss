@@ -95,7 +95,6 @@
             @include active-query-types;
           }
         }
-
         &__text-area {
           margin-top: 0.75em;
           width: 100%;
@@ -108,10 +107,12 @@
         &__text-area:hover {
           border: 0.1em solid $secondary-green;
         }
-        &__checkbox {
-          width: 1em;
+        &__checkbox,
+        input[type="checkbox"] {
+          width: 1.05em;
+          accent-color: $secondary-green;
         }
-        &__checkbox-activated {
+        .checkbox-activated {
           content: url("../img/icon-checkbox-check.svg");
           @include set-background-image;
         }

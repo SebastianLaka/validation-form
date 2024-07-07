@@ -14,13 +14,13 @@ const textareaError = document.querySelector('.form__error-textarea')
 const checkboxError = document.querySelector('.form__checkbox-error')
 const regexName = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
-queryTypes.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    e.target.classList.toggle("query-radio-activated");
-    e.target.classList.toggle("general-enquiry-label-active");
-    e.target.checked = false;
-  });
-});
+// queryTypes.forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     e.target.classList.toggle("query-radio-activated");
+//     e.target.classList.toggle("general-enquiry-label-active");
+//     e.target.checked = false;
+//   });
+// });
 // const validForm = (regex, input, err, inputArea) =>{
 //   if(regex.test(input.value)){
 //      err.forEach(err => err.classList.remove('show-error'));
@@ -44,6 +44,13 @@ submitCTA.addEventListener("click", (e) => {
   // validForm()
   //when all inputs are empty
   // const invalidForm = () => {
+    checkbox.addEventListener('click', (e) =>{
+      if(checkbox.checked == true){
+      e.target.classList.add('checkbox-activated')
+      }else{
+       e.target.classList.remove('checkbox-activated')
+      }
+    })
     const validName = () => {
       if (testFieldName(firstNameInput)) {
         nameError.classList.remove("show-error");
@@ -74,6 +81,14 @@ submitCTA.addEventListener("click", (e) => {
       }
     }
     validEmail();
+    const validQuerys = () =>{
+      queryTypes.forEach(el =>{
+        if(!el.checked === true){
+          console.log('ok');
+        }
+      })
+    }
+    validQuerys();
     const validTextarea = () =>{
       if(textArea.value.length < 1){
         textareaError.classList.add('show-error')
@@ -85,7 +100,7 @@ submitCTA.addEventListener("click", (e) => {
     }
     validTextarea();
     const validCheckbox = () =>{
-      if(checkbox.checked){
+      if(checkbox.checked == true){
         checkboxError.classList.remove('show-error')
       }else{
         checkboxError.classList.add('show-error')
@@ -106,3 +121,4 @@ submitCTA.addEventListener("click", (e) => {
   // };
   // invalidForm();
 });
+

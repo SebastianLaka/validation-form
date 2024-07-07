@@ -177,10 +177,12 @@ textarea {
   .main-app .app-container .form__text-area:hover {
     border: 0.1em solid hsl(169, 82%, 27%);
   }
-  .main-app .app-container .form__checkbox {
-    width: 1em;
+  .main-app .app-container .form__checkbox,
+  .main-app .app-container .form input[type=checkbox] {
+    width: 1.05em;
+    accent-color: hsl(169, 82%, 27%);
   }
-  .main-app .app-container .form__checkbox-activated {
+  .main-app .app-container .form .checkbox-activated {
     content: url("../img/icon-checkbox-check.svg");
     background-size: 90%;
     background-position: right center;
