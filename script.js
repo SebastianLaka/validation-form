@@ -5,7 +5,7 @@ const lastNameInput = document.querySelector(".form__lname-input");
 const emailInput = document.querySelector(".form__email-input");
 const queryTypes = document.querySelectorAll("label[data-query-label]");
 const textArea = document.querySelector(".form__text-area");
-const checkbox = document.querySelector(".clause-section__checkbox");
+const checkbox = document.querySelector(".clause-section__checkbox")
 const submitCTA = document.querySelector(".form__submit-button");
 const nameError = document.querySelector(".form__name-error");
 const surnameError = document.querySelector(".form__surname-error");
@@ -14,38 +14,14 @@ const textareaError = document.querySelector('.form__error-textarea')
 const checkboxError = document.querySelector('.form__checkbox-error')
 const regexName = /[A-Za-z]/;
 const regexEmail = /\S+@\S+\.\S+/;
-// queryTypes.forEach((el) => {
-//   el.addEventListener("click", (e) => {
-//     e.target.classList.toggle("query-radio-activated");
-//     e.target.classList.toggle("general-enquiry-label-active");
-//     e.target.checked = false;
-//   });
-// });
-// const validForm = (regex, input, err, inputArea) =>{
-//   if(regex.test(input.value)){
-//      err.forEach(err => err.classList.remove('show-error'));
-//      inputArea.classList.remove('error-border');
-//   }
-// }
 const testFieldName = (input) => {
   return input.value.length >= 3;
 };
 
 submitCTA.addEventListener("click", (e) => {
   e.preventDefault();
-  // validForm(regexName, firstNameInput, error, firstNameInput)
-  // validForm(regexName, lastNameInput, surnameError, lastNameInput)
-  // const validForm = () => {
-  //   if(regexName.test(firstNameInput.value)){
-  //     nameError.classList.remove('show-error');
-  //     firstNameInput.classList.remove('error-border')
-  //   }
-  // }
-  // validForm()
-  //when all inputs are empty
-  // const invalidForm = () => {
     checkbox.addEventListener('click', (e) =>{
-      if(checkbox.checked == true){
+      if(checkbox.checked){
       e.target.classList.add('checkbox-activated')
       }else{
        e.target.classList.remove('checkbox-activated')
@@ -99,26 +75,14 @@ submitCTA.addEventListener("click", (e) => {
       }
     }
     validTextarea();
-    const validCheckbox = () =>{
-      if(checkbox.checked == true){
+    const validCheckbox = () => {
+      if(checkbox.checked){
         checkboxError.classList.remove('show-error')
+        checkbox.classList.add('checkbox-activated')
       }else{
         checkboxError.classList.add('show-error')
+        checkbox.classList.remove('checkbox-activated')
       }
     }
     validCheckbox();
-    // const invalid = () => {
-    //   if (
-    //     !regexName.test(firstNameInput.value, lastNameInput.value) ||
-    //     !regexEmail.test(emailInput.value) ||
-    //     !textArea.value
-    //   ) {
-    //     error.forEach((err) => err.classList.add("show-error"));
-    //     input.forEach((input) => input.classList.add("error-border"));
-    //   }
-    // };
-    // invalid()
-  // };
-  // invalidForm();
 });
-

@@ -179,8 +179,19 @@ textarea {
   }
   .main-app .app-container .form__checkbox,
   .main-app .app-container .form input[type=checkbox] {
-    width: 1.05em;
+    position: relative;
+    width: 1.15em;
+    padding: 0.5em;
     accent-color: hsl(169, 82%, 27%);
+    z-index: 0;
+  }
+  .main-app .app-container .form input[type=checkbox]:checked::before {
+    position: absolute;
+    content: url("../img/icon-checkbox-check.svg");
+    width: 0.75em;
+    height: 0.75em;
+    top: 0.1em;
+    z-index: 1;
   }
   .main-app .app-container .form .checkbox-activated {
     content: url("../img/icon-checkbox-check.svg");

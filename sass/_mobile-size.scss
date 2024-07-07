@@ -11,20 +11,20 @@
     .succes-modal {
       position: absolute;
       top: -20%;
-      left: 50%; 
+      left: 50%;
       transform: translateX(-50%);
       @include flex-column;
       gap: 1em;
       padding: 1.5em;
       color: $primary-green;
       background-color: $neutral-secondary-grey;
-      border-radius: .8em;
-      &__message-sent{
+      border-radius: 0.8em;
+      &__message-sent {
         display: flex;
-        gap: .5em;
+        gap: 0.5em;
       }
     }
-    .succes-modal-show{
+    .succes-modal-show {
       top: 1em;
     }
     .app-container {
@@ -109,8 +109,19 @@
         }
         &__checkbox,
         input[type="checkbox"] {
-          width: 1.05em;
+          position: relative;
+          width: 1.15em;
+          padding: 0.5em;
           accent-color: $secondary-green;
+          z-index: 0;
+        }
+        input[type="checkbox"]:checked::before{
+          position: absolute;
+          content: url("../img/icon-checkbox-check.svg");
+          width: .75em;
+          height: .75em;
+          top: .1em;
+          z-index: 1;
         }
         .checkbox-activated {
           content: url("../img/icon-checkbox-check.svg");
@@ -137,14 +148,13 @@
         &__submit-button:hover {
           background-color: $neutral-secondary-grey;
         }
-        .show-error{
+        .show-error {
           display: block;
         }
-        .error-border{
-          border: .1em solid $primary-red;
+        .error-border {
+          border: 0.1em solid $primary-red;
         }
       }
-    
     }
   }
 }
