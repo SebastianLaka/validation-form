@@ -76,15 +76,27 @@
             @include border;
             transition: background-color 0.3s, border 0.3s;
             cursor: pointer;
-            &__query-radio {
+            &__query-radio,
+            &__query-radio[type="checkbox"] {
+              position: relative;
               margin-right: 0.75em;
-              width: 0.9em;
+              width: 1.25em;
+              height: 1.25em;
+              border: .1em solid $neutral-primary-grey;
+              accent-color: white;
+              appearance: none;
+              border-radius: 50%;
+              z-index: 0;
             }
-            .query-radio-activated {
+            &__query-radio[type="checkbox"]:checked::before{
+              position: absolute;
               content: url("../img/icon-radio-selected.svg");
-              @include set-background-image;
-              @include active-query-types;
+              top: -0.25em;
+              left: -0.05em;
+              background-color: white;
+              z-index: 1;
             }
+          
           }
           .general-enquiry-label:hover,
           .support-request-label:hover {
@@ -115,12 +127,12 @@
           accent-color: $secondary-green;
           z-index: 0;
         }
-        input[type="checkbox"]:checked::before{
+        input[type="checkbox"]:checked::before {
           position: absolute;
           content: url("../img/icon-checkbox-check.svg");
-          width: .75em;
-          height: .75em;
-          top: .1em;
+          width: 0.75em;
+          height: 0.75em;
+          top: 0.1em;
           z-index: 1;
         }
         .checkbox-activated {

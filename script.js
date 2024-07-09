@@ -3,13 +3,15 @@ const modal = document.querySelector(".succes-modal");
 const firstNameInput = document.querySelector(".form__fname-input");
 const lastNameInput = document.querySelector(".form__lname-input");
 const emailInput = document.querySelector(".form__email-input");
-const queryTypes = document.querySelectorAll("label[data-query-label]");
+const queryGeneral = document.querySelector(".general-enquiry-label__general");
+const querySupport = document.querySelector(".general-enquiry-label__support"); 
 const textArea = document.querySelector(".form__text-area");
 const checkbox = document.querySelector(".clause-section__checkbox")
 const submitCTA = document.querySelector(".form__submit-button");
 const nameError = document.querySelector(".form__name-error");
 const surnameError = document.querySelector(".form__surname-error");
 const emailError = document.querySelector('.form__email-error')
+const queryError = document.querySelector('.form__query-error')
 const textareaError = document.querySelector('.form__error-textarea')
 const checkboxError = document.querySelector('.form__checkbox-error')
 const regexName = /[A-Za-z]/;
@@ -17,7 +19,6 @@ const regexEmail = /\S+@\S+\.\S+/;
 const testFieldName = (input) => {
   return input.value.length >= 3;
 };
-
 submitCTA.addEventListener("click", (e) => {
   e.preventDefault();
     checkbox.addEventListener('click', (e) =>{
@@ -57,14 +58,16 @@ submitCTA.addEventListener("click", (e) => {
       }
     }
     validEmail();
-    const validQuerys = () =>{
-      queryTypes.forEach(el =>{
-        if(!el.checked === true){
-          console.log('ok');
-        }
-      })
+    const validQuery = () =>{
+      if(!queryGeneral.checked && !querySupport.checked){
+        queryError.classList.add('show-error')
+     
+      }else{
+        queryError.classList.remove('show-error')
+      }
     }
-    validQuerys();
+    validQuery();
+   
     const validTextarea = () =>{
       if(textArea.value.length < 1){
         textareaError.classList.add('show-error')
@@ -78,10 +81,8 @@ submitCTA.addEventListener("click", (e) => {
     const validCheckbox = () => {
       if(checkbox.checked){
         checkboxError.classList.remove('show-error')
-        checkbox.classList.add('checkbox-activated')
       }else{
         checkboxError.classList.add('show-error')
-        checkbox.classList.remove('checkbox-activated')
       }
     }
     validCheckbox();

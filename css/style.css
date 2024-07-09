@@ -139,19 +139,29 @@ textarea {
     transition: background-color 0.3s, border 0.3s;
     cursor: pointer;
   }
-  .main-app .app-container .form__query-area .general-enquiry-label__query-radio,
-  .main-app .app-container .form__query-area .support-request-label__query-radio {
+  .main-app .app-container .form__query-area .general-enquiry-label__query-radio, .main-app .app-container .form__query-area .general-enquiry-label__query-radio[type=checkbox],
+  .main-app .app-container .form__query-area .support-request-label__query-radio,
+  .main-app .app-container .form__query-area .support-request-label__query-radio[type=checkbox] {
+    position: relative;
     margin-right: 0.75em;
-    width: 0.9em;
+    width: 1.25em;
+    height: 1.25em;
+    border: 0.1em solid hsl(186, 15%, 59%);
+    accent-color: white;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 50%;
+    z-index: 0;
   }
-  .main-app .app-container .form__query-area .general-enquiry-label .query-radio-activated,
-  .main-app .app-container .form__query-area .support-request-label .query-radio-activated {
+  .main-app .app-container .form__query-area .general-enquiry-label__query-radio[type=checkbox]:checked::before,
+  .main-app .app-container .form__query-area .support-request-label__query-radio[type=checkbox]:checked::before {
+    position: absolute;
     content: url("../img/icon-radio-selected.svg");
-    background-size: 90%;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-color: hsl(148, 38%, 91%);
-    border: 0.1em solid hsl(187, 24%, 22%);
+    top: -0.25em;
+    left: -0.05em;
+    background-color: white;
+    z-index: 1;
   }
   .main-app .app-container .form__query-area .general-enquiry-label:hover,
   .main-app .app-container .form__query-area .support-request-label:hover {
@@ -196,7 +206,7 @@ textarea {
   .main-app .app-container .form .checkbox-activated {
     content: url("../img/icon-checkbox-check.svg");
     background-size: 90%;
-    background-position: right center;
+    background-position: center;
     background-repeat: no-repeat;
   }
   .main-app .app-container .form__confirm-form-area {
