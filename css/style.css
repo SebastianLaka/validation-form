@@ -44,10 +44,10 @@ textarea {
   }
   .main-app .succes-modal {
     position: absolute;
-    top: -20%;
+    top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -150px);
+            transform: translate(-50%, -150px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

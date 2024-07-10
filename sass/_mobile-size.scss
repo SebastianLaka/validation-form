@@ -10,9 +10,9 @@
     min-height: 100svh;
     .succes-modal {
       position: absolute;
-      top: -20%;
+      top: 0;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -150px);
       @include flex-column;
       gap: 1em;
       padding: 1.5em;
@@ -24,6 +24,8 @@
         gap: 0.5em;
       }
     }
+  
+
     .succes-modal-show {
       top: 1em;
     }
@@ -96,7 +98,6 @@
               background-color: white;
               z-index: 1;
             }
-          
           }
           .general-enquiry-label:hover,
           .support-request-label:hover {
