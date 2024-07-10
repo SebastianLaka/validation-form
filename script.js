@@ -15,7 +15,6 @@ const queryError = document.querySelector(".form__query-error");
 const textareaError = document.querySelector(".form__error-textarea");
 const checkboxError = document.querySelector(".form__checkbox-error");
 const regexEmail = /\S+@\S+\.\S+/;
-let isValid = true;
 const testFieldName = (input) => {
   return input.value.length >= 3;
 };
