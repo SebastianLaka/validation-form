@@ -18,6 +18,16 @@ const regexEmail = /\S+@\S+\.\S+/;
 const testFieldName = (input) => {
   return input.value.length >= 3;
 };
+const addError = (error, input, succesModal) => {
+  error.classList.add("show-error");
+  input.classList.add("error-border");
+  succesModal.style.transform = "translate(-50%, -150px)";
+};
+const removeError = (error, input, succesModal) => {
+  error.classList.remove("show-error");
+  input.classList.remove("error-border");
+  succesModal.style.transform = "translate(-50%, 50px)";
+};
 submitCTA.addEventListener("click", (e) => {
   e.preventDefault();
   checkbox.addEventListener("click", (e) => {
@@ -29,36 +39,25 @@ submitCTA.addEventListener("click", (e) => {
   });
   const validName = () => {
     if (testFieldName(firstNameInput)) {
-      nameError.classList.remove("show-error");
-      firstNameInput.classList.remove("error-border");
-      modal.style.transform = "translate(-50%, 50px)";
+      removeError(nameError, firstNameInput, modal);
     } else {
-      nameError.classList.add("show-error");
-      firstNameInput.classList.add("error-border");
+      addError(nameError, firstNameInput, modal)
     }
   };
   validName();
   const validLastName = () => {
     if (testFieldName(lastNameInput)) {
-      surnameError.classList.remove("show-error");
-      lastNameInput.classList.remove("error-border");
-      modal.style.transform = "translate(-50%, 50px)";
+      removeError(surnameError, lastNameInput, modal);
     } else {
-      surnameError.classList.add("show-error");
-      lastNameInput.classList.add("error-border");
-      modal.style.transform = "translate(-50%, -150px)";
+      addError(surnameError, lastNameInput, modal)
     }
   };
   validLastName();
   const validEmail = () => {
     if (regexEmail.test(emailInput.value)) {
-      emailError.classList.remove("show-error");
-      emailInput.classList.remove("error-border");
-      modal.style.transform = "translate(-50%, -150px)";
+      removeError(emailError, emailInput, modal)
     } else {
-      emailError.classList.add("show-error");
-      emailInput.classList.add("error-border");
-      modal.style.transform = "translate(-50%, -150px)";
+      addError(emailError, emailInput, modal)
     }
   };
   validEmail();
@@ -66,7 +65,6 @@ submitCTA.addEventListener("click", (e) => {
     if (!queryGeneral.checked && !querySupport.checked) {
       queryError.classList.add("show-error");
       modal.style.transform = "translate(-50%, 50px)";
-
     } else {
       queryError.classList.remove("show-error");
       modal.style.transform = "translate(-50%, -150px)";
@@ -74,21 +72,17 @@ submitCTA.addEventListener("click", (e) => {
   };
   validQuery();
   const validTextarea = () => {
-    if (textArea.value.length < 1) {
-      textareaError.classList.add("show-error");
-      textArea.classList.add("error-border");
-      modal.style.transform = "translate(-50%, -150px)";
+    if (textArea.value.length > 0) {
+      removeError(textareaError, textArea, modal)
+  
     } else {
-      textareaError.classList.remove("show-error");
-      textArea.classList.remove("error-border");
-      modal.style.transform = "translate(-50%, 50px)";
+      addError(textareaError, textArea, modal)
     }
   };
   validTextarea();
   const validCheckbox = () => {
     if (checkbox.checked) {
       checkboxError.classList.remove("show-error");
-      modal.style.transform = "translate(-50%, 50px)";
     } else {
       checkboxError.classList.add("show-error");
       modal.style.transform = "translate(-50%, -150px)";

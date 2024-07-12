@@ -67,9 +67,6 @@ textarea {
     display: flex;
     gap: 0.5em;
   }
-  .main-app .succes-modal-show {
-    top: 1em;
-  }
   .main-app .app-container {
     display: grid;
     gap: 2em 0;
