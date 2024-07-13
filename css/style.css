@@ -46,8 +46,8 @@ textarea {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -150px);
-            transform: translate(-50%, -150px);
+    -webkit-transform: translate(-50%, -250px);
+            transform: translate(-50%, -250px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -165,8 +165,7 @@ textarea {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }
-  .main-app .app-container .form__query-area .general-enquiry-label-active,
-  .main-app .app-container .form__query-area .support-request-label-active {
+  .main-app .app-container .form__query-area .active-query {
     background-color: hsl(148, 38%, 91%);
     border: 0.1em solid hsl(187, 24%, 22%);
   }

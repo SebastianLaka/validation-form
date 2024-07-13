@@ -37,30 +37,17 @@ submitCTA.addEventListener("click", (e) => {
       e.target.classList.remove("checkbox-activated");
     }
   });
-  const validName = () => {
-    if (testFieldName(firstNameInput)) {
-      removeError(nameError, firstNameInput, modal);
+  const validateFields = (input, error, validationFunc, succesModal) => {
+    if (validationFunc(input)) {
+      removeError(error, input, succesModal);
     } else {
-      addError(nameError, firstNameInput, modal)
+      addError(error, input, succesModal);
     }
   };
-  validName();
-  const validLastName = () => {
-    if (testFieldName(lastNameInput)) {
-      removeError(surnameError, lastNameInput, modal);
-    } else {
-      addError(surnameError, lastNameInput, modal)
-    }
-  };
-  validLastName();
-  const validEmail = () => {
-    if (regexEmail.test(emailInput.value)) {
-      removeError(emailError, emailInput, modal)
-    } else {
-      addError(emailError, emailInput, modal)
-    }
-  };
-  validEmail();
+  validateFields(firstNameInput, nameError, testFieldName, modal);
+  validateFields(lastNameInput, surnameError, testFieldName, modal);
+  validateFields(emailInput, emailError, (input) => regexEmail.test(input.value), modal);
+
   const validQuery = () => {
     if (!queryGeneral.checked && !querySupport.checked) {
       queryError.classList.add("show-error");
@@ -71,15 +58,7 @@ submitCTA.addEventListener("click", (e) => {
     }
   };
   validQuery();
-  const validTextarea = () => {
-    if (textArea.value.length > 0) {
-      removeError(textareaError, textArea, modal)
-  
-    } else {
-      addError(textareaError, textArea, modal)
-    }
-  };
-  validTextarea();
+  validateFields(textArea, textareaError, (input) => input.value.length > 0, modal);
   const validCheckbox = () => {
     if (checkbox.checked) {
       checkboxError.classList.remove("show-error");

@@ -12,7 +12,7 @@
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translate(-50%, -150px);
+      transform: translate(-50%, -250px);
       @include flex-column;
       gap: 1em;
       padding: 1.5em;
@@ -98,8 +98,7 @@
           .support-request-label:hover {
             @include active-query-types;
           }
-          .general-enquiry-label-active,
-          .support-request-label-active {
+          .active-query {
             @include active-query-types;
           }
         }
